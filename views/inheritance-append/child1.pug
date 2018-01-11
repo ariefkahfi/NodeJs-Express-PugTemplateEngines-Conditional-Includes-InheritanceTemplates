@@ -1,0 +1,30 @@
+extends parent.pug
+
+mixin loadData()
+    each val in arrOfObj
+        tr
+            td=val.id
+            td=val.nama
+        
+        
+
+block append content
+    div(style="background-color : dodgerblue;")
+        p ini p1 append block content
+        p ini p2 append block content
+    div(style="background-color : yellowgreen;")
+        p ini yellowgreen1
+        p ini yellowgreen2   
+
+append tabel
+   .tabel-container 
+        table(border="2")
+            tr
+                td Id
+                td Nama
+            +loadData()
+            
+
+append p
+    p ini p2 override dari parent
+    p ini p3 override dari parent

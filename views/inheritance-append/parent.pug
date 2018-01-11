@@ -1,0 +1,24 @@
+-
+    var arrOfObj = [
+        {id : 2 , nama : "arief"},
+        {id : 3, nama : "putro"},
+        {id : 4 , nama : "hello"},
+        {id : 5,nama : "World"}
+    ]
+
+html
+    include ../header.pug
+    body
+        block content
+        div
+            p ini p1 dari parent
+            p ini p2 dari parent
+        div(style=`
+            background-color :crimson;
+        `)
+            block p
+            p Ini tag p1
+
+        block tabel            
+    include ../footer.pug            
+                                
